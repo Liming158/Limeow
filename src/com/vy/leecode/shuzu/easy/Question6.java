@@ -1,4 +1,4 @@
-package com.vy.leecode;
+package com.vy.leecode.shuzu.easy;
 
 /**
  * @author: Ellen
