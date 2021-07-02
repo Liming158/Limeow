@@ -22,6 +22,7 @@ public class Question2 {
 
 			} else {
 
+
 				sum = nums[i];
 
 			}

@@ -48,11 +48,13 @@ public class MergeSort {
 		}
 
 		for (int i = left; i <= right; i++) {
+
 			if (le > mid) {
 
 				a[i] = as[ri];
 
 				ri++;
+
 			} else if (ri > right) {
 
 				a[i] = as[le];
@@ -74,7 +76,7 @@ public class MergeSort {
 
 		}
 
-		return ;
+		return;
 
 	}
 
