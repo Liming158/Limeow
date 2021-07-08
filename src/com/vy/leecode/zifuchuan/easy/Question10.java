@@ -25,7 +25,7 @@ public class Question10 {
 
 			stringBuilder.append(s.charAt(i));
 
-			while (k<s.length()){
+			while (k < s.length()) {
 
 				if (s.charAt(i) == s.charAt(k)) {
 
@@ -33,7 +33,7 @@ public class Question10 {
 
 					max++;
 
-				}else {
+				} else {
 
 					break;
 				}
@@ -51,7 +51,7 @@ public class Question10 {
 
 		}
 
-		return stringBuilder.toString().length()<s.length()?stringBuilder.toString():s;
+		return stringBuilder.toString().length() < s.length() ? stringBuilder.toString() : s;
 
 	}
 
