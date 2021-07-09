@@ -14,61 +14,43 @@ package com.vy.leecode.lianbiao.easy;
  */
 public class Question1 {
 
-	public class ListNode {
 
-		int val;
-		ListNode next;
+	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
-		ListNode() {
-		}
+		ListNode root = new ListNode();
 
-		ListNode(int val) {
-			this.val = val;
-		}
+		ListNode cursor = root;
 
-		ListNode(int val, ListNode next) {
-			this.val = val;
-			this.next = next;
-		}
-	}
+		int flag = 0;
 
-	class Solution {
+		while (l1 != null || l2 != null || flag != 0) {
 
-		public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+			int v1 = l1 == null ? 0 : l1.val;
 
-			ListNode root = new ListNode();
+			int v2 = l2 == null ? 0 : l2.val;
 
-			ListNode cursor = root;
+			int sum = v1 + v2 + flag;
 
-			int flag = 0;
+			//两数相加是否大于10 如果是则进1 将该1赋给flag
+			flag = sum / 10;
 
-			while (l1 != null || l2 != null || flag != 0) {
+			ListNode listNode = new ListNode(sum % 10);
 
-				int v1 = l1 == null ? 0 : l1.val;
+			cursor.next = listNode;
 
-				int v2 = l2 == null ? 0 : l2.val;
+			cursor = listNode;
 
-				int sum = v1 + v2 + flag;
-
-				//两数相加是否大于10 如果是则进1 将该1赋给flag
-				flag = sum / 10;
-
-				ListNode listNode = new ListNode(sum % 10);
-
-				cursor.next = listNode;
-
-				cursor = listNode;
-
-				if (l1!=null) {l1 = l1.next;}
-
-				if (l2!=null) {l2 = l2.next;}
-
+			if (l1 != null) {
+				l1 = l1.next;
 			}
 
-			return root.next;
+			if (l2 != null) {
+				l2 = l2.next;
+			}
 
 		}
 
+		return root.next;
 
 	}
 

@@ -7,62 +7,41 @@ package com.vy.leecode.lianbiao.easy;
  */
 public class Question5 {
 
-	class ListNode {
+	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
-		int val;
-		ListNode next;
+		ListNode head = new ListNode();
 
-		ListNode() {
-		}
+		ListNode cure = head;
 
-		ListNode(int val) {
-			this.val = val;
-		}
+		while (l1 != null && l2 != null) {
+			if (l1.val < l2.val) {
 
-		ListNode(int val, ListNode next) {
-			this.val = val;
-			this.next = next;
-		}
-	}
+				cure.next = l1;
 
-	class Solution {
+				cure = cure.next;
 
-		public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+				l1 = l1.next;
 
-			ListNode head = new ListNode();
+			} else {
+				cure.next = l1;
 
-			ListNode cure = head;
+				cure = cure.next;
 
-			while (l1 != null && l2 != null) {
-				if (l1.val < l2.val) {
-
-					cure.next=l1;
-
-					cure= cure.next;
-
-					l1 = l1.next;
-
-				}else {
-					cure.next=l1;
-
-					cure= cure.next;
-
-					l2 = l2.next;
-
-				}
+				l2 = l2.next;
 
 			}
 
-			if (l1==null){
-
-				cure.next = l2;
-
-			}else {
-
-				cure.next=l1;
-
-			}
-			return head.next;
 		}
+
+		if (l1 == null) {
+
+			cure.next = l2;
+
+		} else {
+
+			cure.next = l1;
+
+		}
+		return head.next;
 	}
 }
