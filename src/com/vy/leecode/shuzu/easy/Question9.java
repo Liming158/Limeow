@@ -14,7 +14,7 @@ package com.vy.leecode.shuzu.easy;
  * 链接：https://leetcode-cn.com/problems/plus-one
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Queition9 {
+public class Question9 {
 
 	public static void main(String[] args) {
 		int[] ints = new int[1];
