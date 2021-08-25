@@ -5,7 +5,7 @@ import com.vy.tree.TreeNode;
 /**
  * @author: Ellen
  * @Date: 2021/8/24 10:27
- * @Description:
+ * @Description: 404 左叶子之和
  */
 public class Question12 {
 
